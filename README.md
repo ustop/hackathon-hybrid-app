@@ -4,7 +4,7 @@ Hi everyone! Here's what you should end up with:
 
 ![](https://user-images.githubusercontent.com/6005261/50201112-eb647b80-03ac-11e9-8327-0d338c7fbe65.png "")
 
-## Installation instructions
+## Installation
 
 1. Clone the repo
 ```bash
@@ -26,7 +26,13 @@ npm install expo-cli --global
 expo start
 ```
 
-## Running the app using your iOS simulator or Android emulator.
+## Running the app using your iOS simulator or Android emulator
+
+This method requires one of the following to be installed:
+- **Android Studio (Cross-platform):** https://developer.android.com/studio/install
+- **XCode (OSX):** https://itunes.apple.com/au/app/xcode/id497799835
+
+Make sure that the device simulator or emulator is open before proceeding.
 
 1. Open the Expo console
 ```bash
@@ -51,6 +57,7 @@ http://localhost:19002/
 https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en
 ```
 
-3. Open the Expo app and scan the QR code from the Expo console (select 'tunnel')
+3. Open the Expo app and scan the QR code from the Expo console  
+**(Select the 'tunnel' option if using Optus wifi)**
 
 ![](https://user-images.githubusercontent.com/6005261/50201262-72195880-03ad-11e9-9b42-ea7715729aea.png "")
