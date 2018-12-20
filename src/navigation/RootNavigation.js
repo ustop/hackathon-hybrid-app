@@ -9,7 +9,7 @@ import { StackNavigator } from 'react-navigation';
 import MainTabNavigator from './MainTabNavigator';
 
 import GalleryScreen from '../containers/GalleryScreen';
-import ServiceLogin from '../containers/ServiceLogin';
+import Welcome from '../containers/Welcome';
 
 // To use this screens please see the full version at https://reactnativestarter.com
 // import ProfileScreen from '../containers/ProfileScreen';
@@ -63,8 +63,8 @@ const RootStackNavigator = StackNavigator(
         header: null,
       },
     },
-    ServiceLogin: {
-      screen: ServiceLogin,
+    Welcome: {
+      screen: Welcome,
       navigationOptions: {
         header: null,
       },

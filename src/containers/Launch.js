@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { compose, withState } from 'recompose';
 import moment from 'moment';
 
-import CatalogueBrowsing from '../screens/CatalogueBrowsing';
+import Launch from '../screens/Launch';
 
 export default compose(
   connect(
@@ -11,4 +11,4 @@ export default compose(
     }),
   ),
   withState('isExtended', 'setIsExtended', false),
-)(CatalogueBrowsing);
+)(Launch);

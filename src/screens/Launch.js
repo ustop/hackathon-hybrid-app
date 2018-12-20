@@ -17,7 +17,7 @@ import {
   Title,
 } from '../components/StyledText';
 
-export default function CatalogueBrowsing({ isExtended, setIsExtended }, props) {
+export default function Launch({ isExtended, setIsExtended }, props) {
   const rnsUrl = 'https://reactnativestarter.com';
   const handleClick = () => {
     Linking.canOpenURL(rnsUrl).then((supported) => {
@@ -40,10 +40,10 @@ export default function CatalogueBrowsing({ isExtended, setIsExtended }, props) 
             <Text size={20} white>Optus</Text>
           </View>
           <View style={styles.section}>
-            <Text size={30} bold white style={styles.title}>Service login</Text>
+            <Text size={30} bold white style={styles.title}>Launch screen</Text>
           </View>
           <View style={[styles.section, styles.sectionLarge]}>
-            <Text color="#19e7f7" hCenter size={15} style={styles.description}>Image banner with link to register interest.</Text>
+            <Text color="#19e7f7" hCenter size={15} style={styles.description}>Launch screen with plan and addon selection and submit.</Text>
           </View>
         </ImageBackground>
     </View>

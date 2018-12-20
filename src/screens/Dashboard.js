@@ -40,10 +40,10 @@ export default function Dashboard({ isExtended, setIsExtended }, props) {
             <Text size={20} white>Optus</Text>
           </View>
           <View style={styles.section}>
-            <Text size={30} bold white style={styles.title}>Service login</Text>
+            <Text size={30} bold white style={styles.title}>Counter</Text>
           </View>
           <View style={[styles.section, styles.sectionLarge]}>
-            <Text color="#19e7f7" hCenter size={15} style={styles.description}>Image banner with link to register interest.</Text>
+            <Text color="#19e7f7" hCenter size={15} style={styles.description}>Counter with personalised content before launch.</Text>
           </View>
         </ImageBackground>
     </View>

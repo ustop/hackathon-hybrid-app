@@ -6,9 +6,10 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import { Colors, Fonts } from '../constants';
 
 import HomeScreen from '../containers/HomeScreen';
-import ServiceLogin from '../containers/ServiceLogin';
+import Welcome from '../containers/Welcome';
 import Dashboard from '../containers/Dashboard';
-import CatalogueBrowsing from '../containers/CatalogueBrowsing';
+import PreOrder from '../containers/PreOrder';
+import Launch from '../containers/Launch';
 import CalendarScreen from '../containers/CalendarScreen';
 import GridsScreen from '../containers/GridsScreen';
 import PagesScreen from '../containers/PagesScreen';
@@ -69,16 +70,26 @@ export default TabNavigator(
       },
     },
     Calendar: {
-      screen: ServiceLogin,
+      screen: Welcome,
       navigationOptions: {
         header: (
           <View style={styles.headerContainer}>
-            <Text style={styles.headerCaption}>ServiceLogin</Text>
+            <Text style={styles.headerCaption}>Welcome</Text>
           </View>
         ),
       },
     },
     Grids: {
+      screen: PreOrder,
+      navigationOptions: {
+        header: (
+          <View style={styles.headerContainer}>
+            <Text style={styles.headerCaption}>PreOrder</Text>
+          </View>
+        ),
+      },
+    },
+    Pages: {
       screen: Dashboard,
       navigationOptions: {
         header: (
@@ -88,30 +99,12 @@ export default TabNavigator(
         ),
       },
     },
-    Pages: {
-      screen: CatalogueBrowsing,
-      navigationOptions: {
-        header: (
-          <View style={styles.headerContainer}>
-            <Image
-              style={styles.headerImage}
-              source={hederBackground}
-            />
-            <Text style={styles.headerCaption}>Catalogue</Text>
-          </View>
-        ),
-      },
-    },
     Components: {
-      screen: ComponentsScreen,
+      screen: Launch,
       navigationOptions: {
         header: (
           <View style={styles.headerContainer}>
-            <Image
-              style={styles.headerImage}
-              source={hederBackground}
-            />
-            <Text style={styles.headerCaption}>Components</Text>
+            <Text style={styles.headerCaption}>Launch</Text>
           </View>
         ),
       },
@@ -128,6 +121,9 @@ export default TabNavigator(
             iconSource = iconHome;
             break;
           case 'Calendar':
+            iconSource = iconCalendar;
+            break;
+          case 'Welcome':
             iconSource = iconCalendar;
             break;
           case 'Grids':
