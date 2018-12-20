@@ -6,6 +6,9 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import { Colors, Fonts } from '../constants';
 
 import HomeScreen from '../containers/HomeScreen';
+import ServiceLogin from '../containers/ServiceLogin';
+import Dashboard from '../containers/Dashboard';
+import CatalogueBrowsing from '../containers/CatalogueBrowsing';
 import CalendarScreen from '../containers/CalendarScreen';
 import GridsScreen from '../containers/GridsScreen';
 import PagesScreen from '../containers/PagesScreen';
@@ -66,35 +69,27 @@ export default TabNavigator(
       },
     },
     Calendar: {
-      screen: CalendarScreen,
+      screen: ServiceLogin,
       navigationOptions: {
         header: (
           <View style={styles.headerContainer}>
-            <Image
-              style={styles.headerImage}
-              source={hederBackground}
-            />
-            <Text style={styles.headerCaption}>Calendar</Text>
+            <Text style={styles.headerCaption}>ServiceLogin</Text>
           </View>
         ),
       },
     },
     Grids: {
-      screen: GridsScreen,
+      screen: Dashboard,
       navigationOptions: {
         header: (
           <View style={styles.headerContainer}>
-            <Image
-              style={styles.headerImage}
-              source={hederBackground}
-            />
-            <Text style={styles.headerCaption}>Grids</Text>
+            <Text style={styles.headerCaption}>Dashboard</Text>
           </View>
         ),
       },
     },
     Pages: {
-      screen: PagesScreen,
+      screen: CatalogueBrowsing,
       navigationOptions: {
         header: (
           <View style={styles.headerContainer}>
@@ -102,7 +97,7 @@ export default TabNavigator(
               style={styles.headerImage}
               source={hederBackground}
             />
-            <Text style={styles.headerCaption}>Pages</Text>
+            <Text style={styles.headerCaption}>Catalogue</Text>
           </View>
         ),
       },

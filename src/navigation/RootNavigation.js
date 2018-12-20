@@ -9,6 +9,7 @@ import { StackNavigator } from 'react-navigation';
 import MainTabNavigator from './MainTabNavigator';
 
 import GalleryScreen from '../containers/GalleryScreen';
+import ServiceLogin from '../containers/ServiceLogin';
 
 // To use this screens please see the full version at https://reactnativestarter.com
 // import ProfileScreen from '../containers/ProfileScreen';
@@ -58,6 +59,12 @@ const RootStackNavigator = StackNavigator(
     },
     Charts: {
       screen: AvailableInFullVersion,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    ServiceLogin: {
+      screen: ServiceLogin,
       navigationOptions: {
         header: null,
       },
