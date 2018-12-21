@@ -69,6 +69,24 @@ const RootStackNavigator = StackNavigator(
         header: null,
       },
     },
+    Addons: {
+      screen: Addons,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    Accessories: {
+      screen: Accessories,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    PlanSelector: {
+      screen: PlanSelector,
+      navigationOptions: {
+        header: null,
+      },
+    },
   },
   {
     navigationOptions: ({ navigation }) => ({
