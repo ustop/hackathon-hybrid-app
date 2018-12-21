@@ -16,38 +16,53 @@ import {
   Text,
   Title,
 } from '../components/StyledText';
+import { NavigationActions } from 'react-navigation';
 
-export default function Launch({ isExtended, setIsExtended }, props) {
-  const rnsUrl = 'https://reactnativestarter.com';
-  const handleClick = () => {
-    Linking.canOpenURL(rnsUrl).then((supported) => {
-      if (supported) {
-        Linking.openURL(rnsUrl);
-      } else {
-        console.log(`Don't know how to open URI: ${rnsUrl}`);
-      }
-    });
-  };
+export default class Launch extends React.Component {
 
-  return (
-    <View style={styles.container}>
-        <ImageBackground
-          source={require('../../assets/images/background.png')}
-          style={styles.bgImage}
-          resizeMode="cover"
-        >
-          <View style={styles.section}>
-            <Text size={20} white>Optus</Text>
-          </View>
-          <View style={styles.section}>
-            <Text size={30} bold white style={styles.title}>Launch screen</Text>
-          </View>
-          <View style={[styles.section, styles.sectionLarge]}>
-            <Text color="#19e7f7" hCenter size={15} style={styles.description}>Launch screen with plan and addon selection and submit.</Text>
-          </View>
-        </ImageBackground>
-    </View>
-  );
+  constructor (props) {
+    super(props);
+    this.next = this.next.bind(this);
+    this.state = {page: 1};
+    console.log(this.state);
+  }
+
+  next () {
+    this.setState({page: this.state.page + 1});
+  }
+
+  prev () {
+    this.setState({page: this.state.page - 1});
+  }
+
+  render () {
+    return (
+      <View style={styles.container}>
+          <ImageBackground
+            source={require('../../assets/images/background.png')}
+            style={styles.bgImage}
+            resizeMode="cover"
+          >
+            <View style={styles.section}>
+              <Text size={20} white>Optus</Text>
+            </View>
+            <View style={styles.section}>
+              <Text size={30} bold white style={styles.title}>Launch screen</Text>
+            </View>
+            <View style={[styles.section, styles.sectionLarge]}>
+              <Text color="#19e7f7" hCenter size={15} style={styles.description}>
+                Launch screen with plan and addon selection and submit. {this.state.page }
+              </Text>
+              <Button
+                primary
+                caption="Choose Plan"
+                onPress={this.next}
+              />
+            </View>
+          </ImageBackground>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
