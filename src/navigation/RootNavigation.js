@@ -10,6 +10,9 @@ import MainTabNavigator from './MainTabNavigator';
 
 import GalleryScreen from '../containers/GalleryScreen';
 import Welcome from '../containers/Welcome';
+import AddonsScreen       from '../containers/AddonsScreen';
+import AccessoriesScreen  from '../containers/AccessoriesScreen';
+import PlanSelectorScreen from '../containers/PlanSelectorScreen';
 
 // To use this screens please see the full version at https://reactnativestarter.com
 // import ProfileScreen from '../containers/ProfileScreen';
@@ -70,19 +73,19 @@ const RootStackNavigator = StackNavigator(
       },
     },
     Addons: {
-      screen: Addons,
+      screen: AddonsScreen,
       navigationOptions: {
         header: null,
       },
     },
     Accessories: {
-      screen: Accessories,
+      screen: AccessoriesScreen,
       navigationOptions: {
         header: null,
       },
     },
     PlanSelector: {
-      screen: PlanSelector,
+      screen: PlanSelectorScreen,
       navigationOptions: {
         header: null,
       },
